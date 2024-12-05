@@ -1,11 +1,12 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
+class Book{
+    constructor(title, author, pages, read){
     this.name = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
-    this.info = () => {
+    this.read = read;}
+    info(){
         return this.read === "read"
             ? `"${this.name}" by ${this.author}, ${this.pages} pages, read`
             : `"${this.name}" by ${this.author}, ${this.pages} pages, not read yet`;
