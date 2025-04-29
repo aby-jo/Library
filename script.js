@@ -92,18 +92,22 @@ function checkreadstatus(title){
 
 addToLibrary("The Hobbit", "J.R.R Tolkien", "256", "not read");
 addToLibrary("Meditations", "Marcus Aurelius", "500", "read");
-
+const form=document.querySelector(".form")
 const dialog = document.querySelector("dialog");
 document.querySelector(".add").addEventListener("click", () => dialog.showModal());
 document.querySelector(".close").addEventListener("click", () => dialog.close());
 document.querySelector(".ok").addEventListener("click", (event) => {
     event.preventDefault();
 
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
     const name = document.getElementById("name").value;
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
     const read = document.getElementById("read").value;
-
+    
     addToLibrary(name, author, pages, read);
     dialog.close();
 

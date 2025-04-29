@@ -13,11 +13,11 @@
     <dialog >
         <p>Greetings, one and all!</p>
         <button autofocus class="close">Close</button>
-        <form method="post">
-            Name:<input type="text" id="name">
-            Author:<input type="text" id="author">
-            Pages: <input type="number" id="pages">
-            Read: <select name="" id="read"><option value="read">Read</option><option value="Not read"> Not Read</option></select>
+        <form method="post" class="form">
+            Name:<input type="text" id="name" required>
+            Author:<input type="text" id="author" required>
+            Pages: <input type="number" id="pages" required>
+            Read: <select name="" id="read" required><option value="read">Read</option><option value="Not read"> Not Read</option></select>
             <button type="submit" class="ok">OK</button>
         </form>
       </dialog>
